@@ -15,6 +15,17 @@
           <div class="item">
             <van-icon class="icon"
                       name="envelop-o" />83413770@qq.com</div>
+          <div class="item item-biji">
+            <van-icon class="icon"
+                      name="https://img.yzcdn.cn/vant/logo.png" />
+            <van-button round
+                        type="info"
+                        @click="toMyNotes">学习笔记</van-button>
+            <van-button round
+                        type="info"
+                        style="marginLeft:5px"
+                        @click="toMessages">留言板</van-button>
+          </div>
         </div>
         <div class="bobAnimate-container">
           <div id="bobAnimate"></div>
@@ -38,7 +49,12 @@ export default {
 
   },
   methods: {
-
+    toMyNotes () {
+      this.$router.push('/myNotes')
+    },
+    toMessages () {
+      this.$router.push({ path: '/messages' })
+    }
 
   }
 }
@@ -90,8 +106,11 @@ export default {
           background rgba(11, 5, 48, 0.3)
           border-radius 15px
           text-align left
+          display flex
+          align-items center
           .icon
-            vertical-align middle
             margin-right 10px
             margin-left 30px
+        .item-biji
+          height 60px
 </style>

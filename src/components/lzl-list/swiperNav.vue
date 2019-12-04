@@ -2,7 +2,7 @@
   <div>
     <swiper :options="swiperOption"
             ref="mySwiper"
-            class="swiper-wrapper">
+            class="mySwiper-wrapper">
       <swiper-slide v-for="(news, index) in nav"
                     :key="index"
                     class="swiper-slide-nav"
@@ -101,16 +101,14 @@ export default {
 </script>
 
 <style>
-.swiper-slide-nav {
+.mySwiper-wrapper .swiper-slide-nav {
   width: 60px;
   padding: 0 5px;
   letter-spacing: 2px;
   text-align: center;
 }
-.swiper-slide-nav.active {
+.mySwiper-wrapper .swiper-slide-nav.active {
   transform: scale(1.1);
   color: #ff2d2d;
-}
-.swiper-wrapper {
 }
 </style>
